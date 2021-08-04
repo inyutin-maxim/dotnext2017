@@ -19,7 +19,7 @@ echo "Begin - all tests!"
   for D in *; do
     if [ -d "${D}" ]; then
     echo "    Begin - ${D}"
-       dotnet ${D}/bin/Release/netcoreapp2.0/${D}.dll > "${D}.results"
+       dotnet ${D}/bin/Release/net5.0/${D}.dll > "${D}.results"
     echo "    End   - ${D}"
     fi
   done
@@ -46,7 +46,7 @@ echo "Begin - all tests!"
   for D in *; do
     if [ -d "${D}" ]; then
     echo "    Begin - ${D}"
-     dotnet ../JavaLogAnalyzer/bin/Release/netcoreapp2.0/JavaLogAnalyzer.dll "${D}.1.results" > "${D}.results";
+     dotnet ../JavaLogAnalyzer/bin/Release/net5.0/JavaLogAnalyzer.dll "${D}.1.results" > "${D}.results";
     echo "    End   - ${D}"
     fi
   done

@@ -23,7 +23,7 @@ ECHO Begin - Specified tests!
   ECHO   Begin - Core tests
   FOR %%d IN (%*) DO (
     ECHO     Begin - %%d
-      dotnet %%d\bin\Release\netcoreapp2.0\%%d.dll > "%%d.results"
+      dotnet %%d\bin\Release\net5.0\%%d.dll > "%%d.results"
     ECHO     End   - %%d
   )
   ECHO   End   - Core tests
@@ -47,7 +47,7 @@ ECHO Begin - Specified tests!
   dotnet build "..\JavaLogAnalyzer" -c Release
   FOR %%d IN (%*) DO (
     ECHO     Begin - %%d
-    dotnet ..\JavaLogAnalyzer\bin\Release\netcoreapp2.0\JavaLogAnalyzer.dll "%%d.1.results" > "%%d.results";
+    dotnet ..\JavaLogAnalyzer\bin\Release\net5.0\JavaLogAnalyzer.dll "%%d.1.results" > "%%d.results";
     ECHO     End   - %%d
   )                      
   ECHO   End   - Java log analyze!
@@ -66,7 +66,7 @@ ECHO Begin - all tests!
   ECHO   Begin - Core tests
   FOR /D %%d IN (*) DO (
     ECHO     Begin - %%d
-      dotnet %%d\bin\Release\netcoreapp2.0\%%d.dll > "%%d.results"
+      dotnet %%d\bin\Release\net5.0\%%d.dll > "%%d.results"
     ECHO     End   - %%d
   )
   ECHO   End   - Core tests
@@ -90,7 +90,7 @@ ECHO Begin - all tests!
   dotnet build "..\JavaLogAnalyzer" -c Release
   FOR /D %%d IN (*) DO (
     ECHO     Begin - %%d
-    dotnet ..\JavaLogAnalyzer\bin\Release\netcoreapp2.0\JavaLogAnalyzer.dll "%%d.1.results" > "%%d.results";
+    dotnet ..\JavaLogAnalyzer\bin\Release\net5.0\JavaLogAnalyzer.dll "%%d.1.results" > "%%d.results";
     ECHO     End   - %%d
   )                      
   ECHO   End   - Java log analyze!

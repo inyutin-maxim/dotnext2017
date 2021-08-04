@@ -5,7 +5,7 @@ ECHO Begin - all analyze!
   dotnet build "..\JavaLogAnalyzer" -c Release
   FOR /D %%d IN (*) DO (
     ECHO     Begin - %%d
-    dotnet ..\JavaLogAnalyzer\bin\Release\netcoreapp2.0\JavaLogAnalyzer.dll "%%d.1.results" > "%%d.results";
+    dotnet ..\JavaLogAnalyzer\bin\Release\net5.0\JavaLogAnalyzer.dll "%%d.1.results" > "%%d.results";
     ECHO     End   - %%d
   )                      
   ECHO   End   - Java log analyze!
